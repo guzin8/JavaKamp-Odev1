@@ -4,32 +4,32 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Instructor egitmen1 = new Instructor(1, "Engin", "Demirog");
-		Instructor egitmen2 = new Instructor(2, "Kerem", "Varýþ");
+		Instructor instructor1 = new Instructor(1, "Engin", "Demirog");
+		Instructor instructor2 = new Instructor(2, "Kerem", "Varýþ");
 		
-		Instructor[] egitmenler = {egitmen1, egitmen2};
+		Instructor[] instructors = {instructor1, instructor2};
 		
-		Category kategori1 = new Category(1, "Programlama");
-		Category kategori2 = new Category(2, "Siber Güvenlik");
+		Category category1 = new Category(1, "Programlama");
+		Category category2 = new Category(2, "Siber Güvenlik");
 		
-		Category[] kategoriler = {kategori1, kategori2};
+		Category[] categories = {category1, category2};
 		
-		for (Instructor egitmen : egitmenler) {
+		for (Instructor instructor : instructors) {
 			
-			System.out.println(egitmen.firstName + " " + egitmen.lastName);
+			System.out.println(instructor.firstName + " " + instructor.lastName);
 		
 		}
 		
-		for (Category kategori : kategoriler) {
-			System.out.println(kategori.categoryName);
+		for (Category category : categories) {
+			System.out.println(category.categoryName);
 			
 		}
 		
 		InstructorManager instructerManager = new InstructorManager();
-		instructerManager.SelectInstructor(egitmen1);
+		instructerManager.SelectInstructor(instructor1);
 		
 		CategoryManager categoryManager = new CategoryManager();
-		categoryManager.addCategory(kategori2);
+		categoryManager.addCategory(category2);
 
 	}
 
